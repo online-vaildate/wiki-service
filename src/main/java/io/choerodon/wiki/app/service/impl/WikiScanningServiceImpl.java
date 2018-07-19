@@ -75,7 +75,7 @@ public class WikiScanningServiceImpl implements WikiScanningService {
         });
     }
 
-    public void setOrganization(OrganizationE organizationE){
+    public void setOrganization(OrganizationE organizationE) {
         //创建组织
         WikiSpaceDTO wikiSpaceDTO = new WikiSpaceDTO();
         wikiSpaceDTO.setName(organizationE.getName());
@@ -103,7 +103,7 @@ public class WikiScanningServiceImpl implements WikiScanningService {
         }
     }
 
-    public void setProject(OrganizationE organizationE){
+    public void setProject(OrganizationE organizationE) {
         if (organizationE.getProjectCount() != 0) {
             List<ProjectE> projectEList = new ArrayList<>();
             Page<ProjectE> projectEPage = iamRepository.pageByProject(organizationE.getId(), 0, 400);
